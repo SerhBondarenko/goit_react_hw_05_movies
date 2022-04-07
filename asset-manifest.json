@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/goit_react_hw_05_movies/static/css/main.a86a74c6.css",
+    "main.js": "/goit_react_hw_05_movies/static/js/main.60b1670a.js",
+    "static/js/522.259b818c.chunk.js": "/goit_react_hw_05_movies/static/js/522.259b818c.chunk.js",
+    "static/css/847.0a0d045a.chunk.css": "/goit_react_hw_05_movies/static/css/847.0a0d045a.chunk.css",
+    "static/js/847.555969d6.chunk.js": "/goit_react_hw_05_movies/static/js/847.555969d6.chunk.js",
+    "static/css/654.a27f32d4.chunk.css": "/goit_react_hw_05_movies/static/css/654.a27f32d4.chunk.css",
+    "static/js/654.f05e38a9.chunk.js": "/goit_react_hw_05_movies/static/js/654.f05e38a9.chunk.js",
+    "static/js/147.bbf691a6.chunk.js": "/goit_react_hw_05_movies/static/js/147.bbf691a6.chunk.js",
+    "static/js/787.0e8c967b.chunk.js": "/goit_react_hw_05_movies/static/js/787.0e8c967b.chunk.js",
+    "static/js/105.706ffd9f.chunk.js": "/goit_react_hw_05_movies/static/js/105.706ffd9f.chunk.js",
+    "index.html": "/goit_react_hw_05_movies/index.html",
+    "main.a86a74c6.css.map": "/goit_react_hw_05_movies/static/css/main.a86a74c6.css.map",
+    "main.60b1670a.js.map": "/goit_react_hw_05_movies/static/js/main.60b1670a.js.map",
+    "522.259b818c.chunk.js.map": "/goit_react_hw_05_movies/static/js/522.259b818c.chunk.js.map",
+    "847.0a0d045a.chunk.css.map": "/goit_react_hw_05_movies/static/css/847.0a0d045a.chunk.css.map",
+    "847.555969d6.chunk.js.map": "/goit_react_hw_05_movies/static/js/847.555969d6.chunk.js.map",
+    "654.a27f32d4.chunk.css.map": "/goit_react_hw_05_movies/static/css/654.a27f32d4.chunk.css.map",
+    "654.f05e38a9.chunk.js.map": "/goit_react_hw_05_movies/static/js/654.f05e38a9.chunk.js.map",
+    "147.bbf691a6.chunk.js.map": "/goit_react_hw_05_movies/static/js/147.bbf691a6.chunk.js.map",
+    "787.0e8c967b.chunk.js.map": "/goit_react_hw_05_movies/static/js/787.0e8c967b.chunk.js.map",
+    "105.706ffd9f.chunk.js.map": "/goit_react_hw_05_movies/static/js/105.706ffd9f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a86a74c6.css",
+    "static/js/main.60b1670a.js"
+  ]
+}
