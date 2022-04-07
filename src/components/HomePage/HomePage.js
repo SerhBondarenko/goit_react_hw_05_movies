@@ -35,10 +35,3 @@ const HomePage = () => {
 
 export default HomePage;
 
-/*
-  <img
-               width={30}
-               src={film.poster_path ? `${imgUrl}${film.poster_path}` : ""}
-               alt={film.id}
-             />{" "}
-             */

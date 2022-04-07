@@ -7,14 +7,14 @@ const Navigation = () => (
     <nav className='navigation'>
          <NavLink
       
-      to="/goit-react-hw-05-movies/"
+      to="/goit_react_hw_05_movies/"
       className={satActive}
     >
       Home
     </NavLink>
 
     <NavLink
-      to="/goit-react-hw-05-movies/movies"
+      to="/goit_react_hw_05_movies/movies"
       className={satActive}
     >
       Movies
