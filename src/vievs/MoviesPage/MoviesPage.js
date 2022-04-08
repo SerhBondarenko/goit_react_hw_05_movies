@@ -21,6 +21,7 @@ export default function MoviesPage() {
     if (!movieName) {
       return;
     }
+    setMovieName('');
     fetchSearchMovie(movieName).then(resp => {
       (console.log('results',resp))
       if (resp.results.length === 0) {
@@ -33,14 +34,17 @@ export default function MoviesPage() {
 
   const handleFormSubmit = query => {
     setMovieName(query);
-    navigate({ ...location, search: `query=${query}` });
+   //navigate({ ...location, search: `query=${query}` });
+
+   
   };
 
   return (
     <>
       <SearchBar onSubmit={handleFormSubmit} />
+      {movies &&<MoviesGallery movies={movies} />}
       <ToastContainer />
-      <MoviesGallery movies={movies} />
+     
     </>
   );
 }

@@ -18,9 +18,10 @@ function App() {
           <Navigation />
           <Suspense fallback="loading...">
       <Routes>
-          <Route path="/goit_react_hw_05_movies/" element={<HomePage />} />
-          <Route path="/goit_react_hw_05_movies/movies/:movieId/*" element={<MovieDetailsPage />} /> 
-          <Route path="/goit_react_hw_05_movies/movies" element={<MoviesPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:movieId/*" element={<MovieDetailsPage />} /> 
+          <Route path="/movies/:movieId/*" element={<MovieDetailsPage />} /> 
+          <Route path="/movies" element={<MoviesPage />} />
           <Route path="*" element={<NotFoundPage />} />
       </Routes>
       </Suspense>
