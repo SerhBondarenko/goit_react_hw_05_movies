@@ -28,7 +28,7 @@ export default function Searchbar({ onSubmit }) {
       <header className={s.Searchbar}>
         <form className={s.SearchForm} onSubmit={handleSubmit}>
           <button type="submit" className={s.Button}>
-            <BsSearch style={{ width: 15, height: 15 }} />
+            <BsSearch style={{ width: 20, height: 20 }} />
           </button>
   
           <input

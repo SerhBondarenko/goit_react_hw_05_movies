@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+//import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, lazy, Suspense  } from 'react'
 import fetchTrendingMovie from '../../services/fetch-movie-api'
 

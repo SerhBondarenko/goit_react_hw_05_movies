@@ -18,7 +18,6 @@ import s from './MovieDetailsPage.module.css';
 
   useEffect(() => {
     fetchMovieId(movieId).then(data => {
-        console.log(data) 
       setMovie(data);
     });
   }, [movieId]);

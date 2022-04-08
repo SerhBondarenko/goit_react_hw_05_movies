@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import s from './MoviesGallery.module.css';
 
 export default function MoviesGallery({ movies }) {
-const notPhoto = 'https://cdn.pixabay.com/photo/2014/04/02/10/25/man-303792_960_720.png';
+const notPhoto = 'https://i.ibb.co/NjvMgv7/poster.png';
   return (
     <ul className={s.Gallery}>
       {movies &&
@@ -27,8 +27,7 @@ const notPhoto = 'https://cdn.pixabay.com/photo/2014/04/02/10/25/man-303792_960_
         ))}
     </ul>
   );
-}
-
+};
 
 
 MoviesGallery.propTypes = {
