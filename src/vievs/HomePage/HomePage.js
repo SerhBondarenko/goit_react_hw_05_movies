@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from 'react'
-//import s from '../HomePage/styles.module.css'
+import { useState, useEffect, lazy, Suspense  } from 'react'
+
 import fetchTrendingMovie from '../../services/fetch-movie-api'
+
+const MoviesGallery = lazy(() => import('../../components/MoviesGallery/MoviesGallery'));
 
 const HomePage = () => {
 
     const [trendFilms, setTrendFilm] = useState(null);
-    const location = useLocation();
+    //const location = useLocation();
     
     useEffect(() => {
         fetchTrendingMovie().then(data => {
@@ -15,7 +17,17 @@ const HomePage = () => {
     }, [])
 
  return (
-   <main style={{ padding: "1rem 0" }}>
+   <>
+    <Suspense fallback="loading..."></Suspense>
+  <MoviesGallery movies={trendFilms} />
+  <Suspense />
+  </>
+ );
+}
+
+export default HomePage;
+
+/** <main style={{ padding: "1rem 0" }}>
      <hr />
      <h2>Trending today</h2>
 
@@ -28,10 +40,4 @@ const HomePage = () => {
          ))}
        </ul>
      )}
-   </main>
- );
-}
-
-
-export default HomePage;
-
+   </main> */
