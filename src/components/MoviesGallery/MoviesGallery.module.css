@@ -29,9 +29,12 @@
     color: rgb(1, 23, 23);
   }
   .Title{
+    margin: 0;
+    padding: 0;
       color: black;
   }
+  
   .Item{
-      border: 1px solid black;
-      border-radius: 5px;
+ margin-bottom: 15px;
   }
+  

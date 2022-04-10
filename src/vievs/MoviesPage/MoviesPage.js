@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-//import { useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect,} from 'react';
+import { useSearchParams} from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 
@@ -12,14 +12,14 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function MoviesPage() {
   const [movieName, setMovieName] = useState('');
   const [movies, setMovies] = useState(null);
-  //let navigate = useNavigate();
-  //const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = searchParams.get('query') || '' ;
  
   useEffect(() => {
-    if (!movieName) {
+    if (movieName === '') {
+      setSearchParams({})
       return;
     }
-    setMovieName('');
     fetchSearchMovie(movieName).then(resp => {
       (console.log('results',resp))
       if (resp.results.length === 0) {
@@ -28,11 +28,12 @@ export default function MoviesPage() {
       }
       setMovies(resp.results);
     });
-  }, [movieName,]);
+  }, [movieName, setSearchParams]);
+
 
   const handleFormSubmit = query => {
     setMovieName(query);
-   //navigate({ ...location, search: `query=${query}` });
+    setSearchParams({searchQuery: query})
   };
 
   return (
