@@ -10,17 +10,14 @@ import { fetchSearchMovie } from "../../services/fetch-movie-api";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function MoviesPage() {
-  const [movieName, setMovieName] = useState('');
+  const [query, setQuery] = useState('');
   const [movies, setMovies] = useState(null);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const searchQuery = searchParams.get('query') || '' ;
+  let [searchParams, setSearchParams] = useSearchParams();
  
   useEffect(() => {
-    if (movieName === '') {
-      setSearchParams({})
-      return;
-    }
-    fetchSearchMovie(movieName).then(resp => {
+const searchQuery = searchParams.get('query');
+if (!searchQuery) return;
+    fetchSearchMovie(searchQuery).then(resp => {
       (console.log('results',resp))
       if (resp.results.length === 0) {
         toast.error('Ничего не найдено');
@@ -28,12 +25,12 @@ export default function MoviesPage() {
       }
       setMovies(resp.results);
     });
-  }, [movieName, setSearchParams]);
+  }, [query, searchParams]);
 
 
   const handleFormSubmit = query => {
-    setMovieName(query);
-    setSearchParams({searchQuery: query})
+    setSearchParams({query: query})
+    setQuery(searchParams.get('query'));
   };
 
   return (
